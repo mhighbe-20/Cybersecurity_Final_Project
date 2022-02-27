@@ -17,23 +17,23 @@ Command: $ nmap -sV -sC -O 192.168.1.0/24
 
 
 This scan identifies the services below as potential points of entry:
-- Target 1
-  - 1. Port 22/TCP Open SSH
-  - 2. Port 80/TCP Open HTTP
-  - 3. Port 111/TCP Open rcpbind
-  - 4. Port 139/TCP Open netbios-ssn
-  5. Port 445/TCP Open netbios-ssn
+  * Target 1
+     1. Port 22/TCP Open SSH
+     2. Port 80/TCP Open HTTP
+     3. Port 111/TCP Open rcpbind
+     4. Port 139/TCP Open netbios-ssn
+     5. Port 445/TCP Open netbios-ssn
 
 _TODO: Fill out the list below. Include severity, and CVE numbers, if possible._
 
 The following vulnerabilities were identified on each target:
-- Target 1
-  - 1. User Enumeration (WordPress site)
-     a. The stop-user-enumeration plugin before 1.3.8 for WordPress has XSS. [CVE-2017-18536](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-18536/ "CVE-2017-18536")
-     b. WordPress Core < 4.7.1 - Username Enumeration Vulnerability CVE-2017-5487 Scanner [CVE-2017-5487](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-5487/ "CVE-2017-5487")
-  - 2. Weak user Passwords
-  - 3. Unsalted user Password Hash (WordPress)
-  - 4. Misconfiguration of User Privileges/Privilege Escalation
+  * Target 1
+     1. User Enumeration (WordPress site)
+      a. The stop-user-enumeration plugin before 1.3.8 for WordPress has XSS. [CVE-2017-18536](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-18536/ "CVE-2017-18536")
+      b. WordPress Core < 4.7.1 - Username Enumeration Vulnerability CVE-2017-5487 Scanner [CVE-2017-5487](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-5487/ "CVE-2017-5487")
+    2. Weak user Passwords
+    3. Unsalted user Password Hash (WordPress)
+    4. Misconfiguration of User Privileges/Privilege Escalation
 
 _TODO: Include vulnerability scan results to prove the identified vulnerabilities._
 
