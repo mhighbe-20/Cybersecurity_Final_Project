@@ -75,7 +75,7 @@ The Red Team was able to penetrate `Target 1` and retrieve the following confide
 <img src="https://github.com/mhighbe-20/Cybersecurity_Final_Project/blob/main/Images/RedTeam/wp-config_PWD.png?raw=true" alt="wp_passwd"/>  
 
   `Flag3` was found in the wp_posts table in the wordpress database.   
-              - Commands:     
+            - Commands:     
                 - Connected to mysql: -u root -p'R@v3nSecurity'  
                 - show databases;  
                 - use wordpress;  
@@ -89,10 +89,10 @@ The Red Team was able to penetrate `Target 1` and retrieve the following confide
 
   - `Flag4: 715dea6c055b9fe3337544932f2941ce`:   
             - **Exploit Used**    
-              - Use of weak salted hashes and Python root escalation Privileges.  
-              - Still using michaels credentials, gather the password hashes to crack.  
-              - The usernames and password hashes were copied to the kali server in a file (wp_hashes.txt), and cracked with John.  
-              - select * from wp_users;   
+                - Use of weak salted hashes and Python root escalation Privileges.  
+                - Still using michaels credentials, gather the password hashes to crack.  
+                - The usernames and password hashes were copied to the kali server in a file (wp_hashes.txt), and cracked with John.  
+                - select * from wp_users;   
   <img src="https://github.com/mhighbe-20/Cybersecurity_Final_Project/blob/main/Images/RedTeam/mysql_hashes.png?raw=true"/>
 
  - john wp_hashes.text
