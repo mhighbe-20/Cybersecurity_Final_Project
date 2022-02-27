@@ -73,11 +73,8 @@ The Red Team was able to penetrate `Target 1` and retrieve the following confide
      - cat flag2.txt
 <img src="https://github.com/mhighbe-20/Cybersecurity_Final_Project/blob/main/Images/RedTeam/FLAG-2.png?raw=true" alt="Flag2"/>  
 
-
   - `Flag3: afc01ab56b50591e7dccf93122770cd2` _hash value_  
         - **Exploit Used**
-          - _TODO: Identify the exploit used_
-          - _TODO: Include the command run_   
           - Using michael's credentials; locate the wp-config.php, and use mysql to explore the database.
           - the wp-config.php displayed the db_password in plain text.
 
@@ -86,13 +83,16 @@ The Red Team was able to penetrate `Target 1` and retrieve the following confide
 <img src="https://github.com/mhighbe-20/Cybersecurity_Final_Project/blob/main/Images/RedTeam/wp-config_PWD.png?raw=true" alt="wp_passwd"/>  
 
            - Flag3 was found in the wp_posts table in the wordpress database.
-           - Commands:
-             - Connected to mysql: -u root -p R@v3nSecurity
-             - show databases;
-             - use wordpress;
-             - show tables;
+             - Commands:
+              - Connected to mysql: -u root -p'R@v3nSecurity'
+              - show databases;
+              - use wordpress;
+              - show tables;
              - select * from wp_posts;  
+
 <img src="https://github.com/mhighbe-20/Cybersecurity_Final_Project/blob/main/Images/RedTeam/myswl-logon.png?raw=true" alt="mysql-login"/>  
+<img src="https://github.com/mhighbe-20/Cybersecurity_Final_Project/blob/main/Images/RedTeam/mysql_databases.png?raw=true" alt="mysql_databases"/>    
+<img src="https://github.com/mhighbe-20/Cybersecurity_Final_Project/blob/main/Images/RedTeam/mysql_TABLES.png?raw=true" alt="mysql_TABLES"/>  
 
 
 
@@ -102,3 +102,6 @@ The Red Team was able to penetrate `Target 1` and retrieve the following confide
             - **Exploit Used**
               - _TODO: Identify the exploit used_
               - _TODO: Include the command run_  
+              - Use of weak salted hashes and Python root escalation Privileges.  
+              - Still using michaels credentials, gather the password hashes to crack.  
+              - The usernames and password hashes wer copied to the kali server in a file (wp_hashes.txt), and cracked with John.  
