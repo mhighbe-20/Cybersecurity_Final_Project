@@ -40,18 +40,19 @@ The following machines were identified on the network:
 <img src="https://github.com/mhighbe-20/Cybersecurity_Final_Project/blob/main/Images/Final%20RedvsBlue.drawio.png?raw=true" style="height: 400px; width:600px;"/>
 
 ### Description of Targets
-_TODO: Answer the questions below._
+Out of the vulnerable VMs on the network, Target 1 was the focus of the attack.
 
-The target of this attack was: `Target 1` (TODO: IP Address).
+The target of this attack was: `Target 1` (192.168.1.110).
 
 Target 1 is an Apache web server and has SSH enabled, so ports 80 and 22 are possible ports of entry for attackers. As such, the following alerts have been implemented:
+<img src="https://github.com/mhighbe-20/Cybersecurity_Final_Project/blob/main/Images/RedTeam/Target-1_nmap.png?raw=true" style="height: 400px; width:600px;"/>
 
 ### Monitoring the Targets
 
 Traffic to these services should be carefully monitored. To this end, we have implemented the alerts below:
 
 #### Name of Alert 1
-_TODO: Replace `Alert 1` with the name of the alert._
+`**Excessive HTTP Errors**` 
 
 Alert 1 is implemented as follows:
   - **Metric**: TODO
