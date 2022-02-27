@@ -33,7 +33,7 @@ The following vulnerabilities were identified on each target:
           b. WordPress Core < 4.7.1 - Username Enumeration Vulnerability CVE-2017-5487 Scanner [CVE-2017-5487](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-5487/ "CVE-2017-5487")  
     2. Weak user Passwords  hydra -l michael -P /usr/share/wordlists/rockyou.txt 192.168.1.110 ssh      
     3. Unsalted user Password Hash (WordPress)  
-    4. Misconfiguration of User Privileges/Privilege Escalation with Python  
+    4. Misconfiguration of User Privileges/Privilege Escalation with Python.    
 
 _TODO: Include vulnerability scan results to prove the identified vulnerabilities._
 
@@ -46,7 +46,7 @@ The Red Team was able to penetrate `Target 1` and retrieve the following confide
     - **Exploit Used**
       - WPScan to enumerate users of target1 WordPress site.
       - wpscan --url http://192.168.1.110 --enumerate u
-       <img src="https://github.com/mhighbe-20/Cybersecurity_Final_Project/blob/main/Images/RedTeam/wpscan_michael.png?raw=true" alt="WPScan Users" style="height: 400px; width:600px;"/>
+       <img src="https://github.com/mhighbe-20/Cybersecurity_Final_Project/blob/main/Images/RedTeam/wpscan_michael.png?raw=true" alt="WPScan Users" style="height: 200px; width:400px;"/>
       - Brute force guess or hydra -l michael -P /usr/share/wordlists/rockyou.txt 192.168.1.110 ssh  
       - _TODO: Include the command run_
   - `Flag2: fc3fd58dcdad9ab23faca6e9a3e581c` _hash value_  
