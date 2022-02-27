@@ -75,13 +75,15 @@ The Red Team was able to penetrate `Target 1` and retrieve the following confide
 <img src="https://github.com/mhighbe-20/Cybersecurity_Final_Project/blob/main/Images/RedTeam/wp-config_PWD.png?raw=true" alt="wp_passwd"/>  
 
   `Flag3` was found in the wp_posts table in the wordpress database.   
-              <p>Commands:<br>   
-                    - Connected to mysql: -u root -p'R@v3nSecurity'<br>
-                    - show databases;<br>
-                    - use wordpress;<br>  
-                    - show tables;<br>   
-                    - select * from wp_posts;
-                    </p>
+            <ol>
+              - Commands:   
+                    <oi>
+                    - <li>Connected to mysql: -u root -p'R@v3nSecurity'</li>
+                    - <li>show databases;</li>
+                    - <li>use wordpress;</li>  
+                    - <li>show tables;</li>   
+                    - <li>select * from wp_posts;</li>
+                    </ol>
 
 <img src="https://github.com/mhighbe-20/Cybersecurity_Final_Project/blob/main/Images/RedTeam/myswl-logon.png?raw=true" alt="mysql-login"/>  
 <img src="https://github.com/mhighbe-20/Cybersecurity_Final_Project/blob/main/Images/RedTeam/mysql_databases.png?raw=true" alt="mysql_databases"/>    
