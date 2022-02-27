@@ -29,11 +29,11 @@ _TODO: Fill out the list below. Include severity, and CVE numbers, if possible._
 The following vulnerabilities were identified on each target:
    Target 1  
     1. User Enumeration (WordPress site)  
-       a. The stop-user-enumeration plugin before 1.3.8 for WordPress has XSS. [CVE-2017-18536](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-18536/ "CVE-2017-18536")  
-       b. WordPress Core < 4.7.1 - Username Enumeration Vulnerability CVE-2017-5487 Scanner [CVE-2017-5487](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-5487/ "CVE-2017-5487")  
-    2. Weak user Passwords  
+          a. The stop-user-enumeration plugin before 1.3.8 for WordPress has XSS. [CVE-2017-18536](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-18536/ "CVE-2017-18536")  
+          b. WordPress Core < 4.7.1 - Username Enumeration Vulnerability CVE-2017-5487 Scanner [CVE-2017-5487](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-5487/ "CVE-2017-5487")  
+    2. Weak user Passwords  hydra -l michael -P /usr/share/wordlists/rockyou.txt 192.168.1.110 ssh      
     3. Unsalted user Password Hash (WordPress)  
-    4. Misconfiguration of User Privileges/Privilege Escalation  
+    4. Misconfiguration of User Privileges/Privilege Escalation with Python  
 
 _TODO: Include vulnerability scan results to prove the identified vulnerabilities._
 
@@ -42,11 +42,22 @@ _TODO: Fill out the details below. Include screenshots where possible._
 
 The Red Team was able to penetrate `Target 1` and retrieve the following confidential data:
 - Target 1
-  - `flag1.txt`: _TODO: Insert `flag1.txt` hash value_
+  - `Flag1: b9bbcb33ellb80be759c4e844862482d` _hash value_
+    - **Exploit Used**
+      - WPScan to enumerate users of target1 WordPress site.
+      - wpscan --url http://192.168.1.110 --enumerate u
+       <img src="https://github.com/mhighbe-20/Cybersecurity_Final_Project/blob/main/Images/RedTeam/wpscan_michael.png?raw=true" alt="WPScan Users" style="height: 400px; width:600px;"/>
+      - Brute force guess or hydra -l michael -P /usr/share/wordlists/rockyou.txt 192.168.1.110 ssh  
+      - _TODO: Include the command run_
+  - `Flag2: fc3fd58dcdad9ab23faca6e9a3e581c` _hash value_  
     - **Exploit Used**
       - _TODO: Identify the exploit used_
       - _TODO: Include the command run_
-  - `flag2.txt`: _TODO: Insert `flag2.txt` hash value_
-    - **Exploit Used**
-      - _TODO: Identify the exploit used_
-      - _TODO: Include the command run_
+  - `Flag3: afc01ab56b50591e7dccf93122770cd2` _hash value_  
+        - **Exploit Used**
+          - _TODO: Identify the exploit used_
+          - _TODO: Include the command run_      
+  - `Flag4: 715dea6c055b9fe3337544932f2941ce`: _hash value_  
+            - **Exploit Used**
+              - _TODO: Identify the exploit used_
+              - _TODO: Include the command run_  
