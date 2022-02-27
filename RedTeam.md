@@ -12,7 +12,7 @@ Nmap scan results for each machine reveal the below services and OS details:
 
 ```bash
 Command: $ nmap -sV -sC -O 192.168.1.0/24
-![alt text](/Images/RedTeam/Target-1_nmap.png "Target1_IP")
+![alt text](https://github.com/mhighbe-20/Cybersecurity_Final_Project/blob/main/Images/RedTeam/Target-1_nmap.png "Target1_IP")
   # TODO: Insert scan output
 ```
 
