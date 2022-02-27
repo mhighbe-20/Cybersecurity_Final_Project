@@ -36,6 +36,8 @@ The following machines were identified on the network:
   - **Purpose**: Gateway / Hosts
   - **IP Address**: 192.168.1.1
 
+- network Diagram
+<img src="https://github.com/mhighbe-20/Cybersecurity_Final_Project/blob/main/Images/Final%20RedvsBlue.drawio.png?raw=true"/>
 
 ### Description of Targets
 _TODO: Answer the questions below._
