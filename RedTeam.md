@@ -74,12 +74,30 @@ The Red Team was able to penetrate `Target 1` and retrieve the following confide
 <img src="https://github.com/mhighbe-20/Cybersecurity_Final_Project/blob/main/Images/RedTeam/FLAG-2.png?raw=true" alt="Flag2"/>  
 
 
-
-
   - `Flag3: afc01ab56b50591e7dccf93122770cd2` _hash value_  
         - **Exploit Used**
           - _TODO: Identify the exploit used_
-          - _TODO: Include the command run_      
+          - _TODO: Include the command run_   
+          - Using michael's credentials; locate the wp-config.php, and use mysql to explore the database.
+          - the wp-config.php displayed the db_password in plain text.
+
+<img src="https://github.com/mhighbe-20/Cybersecurity_Final_Project/blob/main/Images/RedTeam/wp-config-php--location.png?raw=true" alt="wp_location"/>  
+
+<img src="https://github.com/mhighbe-20/Cybersecurity_Final_Project/blob/main/Images/RedTeam/wp-config_PWD.png?raw=true" alt="wp_passwd"/>  
+
+           - Flag3 was found in the wp_posts table in the wordpress database.
+           - Commands:
+             - Connected to mysql: -u root -p R@v3nSecurity
+             - show databases;
+             - use wordpress;
+             - show tables;
+             - select * from wp_posts;  
+<img src="https://github.com/mhighbe-20/Cybersecurity_Final_Project/blob/main/Images/RedTeam/myswl-logon.png?raw=true" alt="mysql-login"/>  
+
+
+
+
+
   - `Flag4: 715dea6c055b9fe3337544932f2941ce`: _hash value_  
             - **Exploit Used**
               - _TODO: Identify the exploit used_
