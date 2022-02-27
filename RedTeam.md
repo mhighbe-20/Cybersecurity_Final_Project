@@ -74,7 +74,7 @@ The Red Team was able to penetrate `Target 1` and retrieve the following confide
           - cat wp-config-php       
 <img src="https://github.com/mhighbe-20/Cybersecurity_Final_Project/blob/main/Images/RedTeam/wp-config_PWD.png?raw=true" alt="wp_passwd"/>  
 
-          `Flag3` was found in the wp_posts table in the wordpress database.
+-        `Flag3` was found in the wp_posts table in the wordpress database.
            - Commands:
               - Connected to mysql: -u root -p'R@v3nSecurity'
               - show databases;
@@ -95,7 +95,8 @@ The Red Team was able to penetrate `Target 1` and retrieve the following confide
                - select * from wp_users;  
   <img src="https://github.com/mhighbe-20/Cybersecurity_Final_Project/blob/main/Images/RedTeam/mysql_hashes.png?raw=true"/>
 
-         - john wp_hashes.text
+ - john wp_hashes.text
+
 <img src="https://github.com/mhighbe-20/Cybersecurity_Final_Project/blob/main/Images/RedTeam/Steven_Pink84.png?raw=true" style="height: 400px; width:600px;"/>
 
               - use Steven credentials to ssh to target1 and escalate privileges to find flag4.  
