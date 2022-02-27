@@ -87,6 +87,7 @@ The Red Team was able to penetrate `Target 1` and retrieve the following confide
 <img src="https://github.com/mhighbe-20/Cybersecurity_Final_Project/blob/main/Images/RedTeam/mysql_TABLES.png?raw=true" alt="mysql_TABLES"/>  
 <img src="https://github.com/mhighbe-20/Cybersecurity_Final_Project/blob/main/Images/RedTeam/FLAG-3_mysql_wp_posts.png?raw=true"/>
 
+
   - `Flag4: 715dea6c055b9fe3337544932f2941ce`:   
         - **Exploit Used**  
             - Use of weak salted hashes and Python root escalation Privileges.   
