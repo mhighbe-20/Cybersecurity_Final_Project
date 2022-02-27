@@ -28,8 +28,8 @@ _TODO: Fill out the list below. Include severity, and CVE numbers, if possible._
 
 The following vulnerabilities were identified on each target:
 - Target 1
-  - 1. CVE-2017-18536 [Link](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-18536)
-  - CVE-2017-5487 [Link](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-5487)
+  - 1. CVE-2017-18536 [Link](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-18536/ "CVE-2017-18536")
+  - CVE-2017-5487 [CVE-2017-5487](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-5487/ "CVE-2017-5487")
   - List of
   - Critical
   - Vulnerabilities
