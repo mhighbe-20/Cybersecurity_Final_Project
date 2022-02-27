@@ -27,8 +27,8 @@ This scan identifies the services below as potential points of entry:
 The following vulnerabilities were identified on each target:     
    Target 1  
     1. User Enumeration (WordPress site)  
-  -    a. The stop-user-enumeration plugin before 1.3.8 for WordPress has XSS. [CVE-2017-18536](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-18536/ "CVE-2017-18536")  
-  -    b. WordPress Core < 4.7.1 - Username Enumeration Vulnerability CVE-2017-5487 Scanner [CVE-2017-5487](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-5487/ "CVE-2017-5487")  
+        - a. The stop-user-enumeration plugin before 1.3.8 for WordPress has XSS. [CVE-2017-18536](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-18536/ "CVE-2017-18536")  
+        - b. WordPress Core < 4.7.1 - Username Enumeration Vulnerability CVE-2017-5487 Scanner [CVE-2017-5487](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-5487/ "CVE-2017-5487")  
     2. Weak user Passwords - guess or use hydra -l michael -P /usr/share/wordlists/rockyou.txt 192.168.1.110 ssh      
     3. Unsalted user Password Hash (WordPress)  
     4. Misconfiguration of User Privileges/Privilege Escalation with Python.    
@@ -75,15 +75,13 @@ The Red Team was able to penetrate `Target 1` and retrieve the following confide
 <img src="https://github.com/mhighbe-20/Cybersecurity_Final_Project/blob/main/Images/RedTeam/wp-config_PWD.png?raw=true" alt="wp_passwd"/>  
 
   `Flag3` was found in the wp_posts table in the wordpress database.   
-            <ol>
-              - Commands:   
-                    <oi>
-                    - <li>Connected to mysql: -u root -p'R@v3nSecurity'</li>
-                    - <li>show databases;</li>
-                    - <li>use wordpress;</li>  
-                    - <li>show tables;</li>   
-                    - <li>select * from wp_posts;</li>
-                    </ol>
+---
+        - Commands:  
+            - Connected to mysql: -u root -p'R@v3nSecurity'  
+            - show databases;  
+            - use wordpress;  
+            - show tables;  
+            - select * from wp_posts;  
 
 <img src="https://github.com/mhighbe-20/Cybersecurity_Final_Project/blob/main/Images/RedTeam/myswl-logon.png?raw=true" alt="mysql-login"/>  
 <img src="https://github.com/mhighbe-20/Cybersecurity_Final_Project/blob/main/Images/RedTeam/mysql_databases.png?raw=true" alt="mysql_databases"/>    
