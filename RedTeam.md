@@ -27,8 +27,8 @@ This scan identifies the services below as potential points of entry:
 The following vulnerabilities were identified on each target:     
    Target 1  
     1. User Enumeration (WordPress site)  
-       - a. The stop-user-enumeration plugin before 1.3.8 for WordPress has XSS. [CVE-2017-18536](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-18536/ "CVE-2017-18536")  
-       - b. WordPress Core < 4.7.1 - Username Enumeration Vulnerability CVE-2017-5487 Scanner [CVE-2017-5487](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-5487/ "CVE-2017-5487")  
+        - a. The stop-user-enumeration plugin before 1.3.8 for WordPress has XSS. [CVE-2017-18536](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-18536/ "CVE-2017-18536")  
+        - b. WordPress Core < 4.7.1 - Username Enumeration Vulnerability CVE-2017-5487 Scanner [CVE-2017-5487](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-5487/ "CVE-2017-5487")  
     2. Weak user Passwords - guess or use hydra -l michael -P /usr/share/wordlists/rockyou.txt 192.168.1.110 ssh      
     3. Unsalted user Password Hash (WordPress)  
     4. Misconfiguration of User Privileges/Privilege Escalation with Python.    
@@ -89,10 +89,10 @@ The Red Team was able to penetrate `Target 1` and retrieve the following confide
 
   - `Flag4: 715dea6c055b9fe3337544932f2941ce`:   
         - **Exploit Used**    
-            - Use of weak salted hashes and Python root escalation Privileges.  
-            - Still using michaels credentials, gather the password hashes to crack.  
-            - The usernames and password hashes were copied to the kali server in a file (wp_hashes.txt), and cracked with John.  
-            - select * from wp_users;   
+              - Use of weak salted hashes and Python root escalation Privileges.  
+              - Still using michaels credentials, gather the password hashes to crack.  
+              - The usernames and password hashes were copied to the kali server in a file (wp_hashes.txt), and cracked with John.  
+              - select * from wp_users;   
   <img src="https://github.com/mhighbe-20/Cybersecurity_Final_Project/blob/main/Images/RedTeam/mysql_hashes.png?raw=true"/>
 
  - john wp_hashes.text
