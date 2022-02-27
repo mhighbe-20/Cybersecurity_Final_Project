@@ -88,11 +88,12 @@ The Red Team was able to penetrate `Target 1` and retrieve the following confide
 <img src="https://github.com/mhighbe-20/Cybersecurity_Final_Project/blob/main/Images/RedTeam/FLAG-3_mysql_wp_posts.png?raw=true"/>
 
   - `Flag4: 715dea6c055b9fe3337544932f2941ce`:   
-        - **Exploit Used**    
-              - Use of weak salted hashes and Python root escalation Privileges.  
-              - Still using michaels credentials, gather the password hashes to crack.  
-              - The usernames and password hashes were copied to the kali server in a file (wp_hashes.txt), and cracked with John.  
-              - select * from wp_users;   
+        - **Exploit Used**  
+            - Use of weak salted hashes and Python root escalation Privileges.
+            - Still using michaels credentials, gather the password hashes to crack.
+            - The usernames and password hashes were copied to the kali server in a file (wp_hashes.txt), and cracked with John.
+            - select * from wp_users;  
+
   <img src="https://github.com/mhighbe-20/Cybersecurity_Final_Project/blob/main/Images/RedTeam/mysql_hashes.png?raw=true"/>
 
  - john wp_hashes.text
