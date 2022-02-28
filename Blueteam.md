@@ -85,12 +85,30 @@ _TODO_:
 - Each alert above pertains to a specific vulnerability/exploit. Recall that alerts only detect malicious behavior, but do not stop it. For each vulnerability/exploit identified by the alerts above, suggest a patch. E.g., implementing a blocklist is an effective tactic against brute-force attacks. It is not necessary to explain _how_ to implement each patch.
 
 The logs and alerts generated during the assessment suggest that this network is susceptible to several active threats, identified by the alerts above. In addition to watching for occurrences of such threats, the network should be hardened against them. The Blue Team suggests that IT implement the fixes below to protect the network:
-- Vulnerability 1
-  - **Patch**: TODO: E.g., _install `special-security-package` with `apt-get`_
-  - **Why It Works**: TODO: E.g., _`special-security-package` scans the system for viruses every day_
-- Vulnerability 2
-  - **Patch**: TODO: E.g., _install `special-security-package` with `apt-get`_
-  - **Why It Works**: TODO: E.g., _`special-security-package` scans the system for viruses every day_
-- Vulnerability 3
-  - **Patch**: TODO: E.g., _install `special-security-package` with `apt-get`_
-  - **Why It Works**: TODO: E.g., _`special-security-package` scans the system for viruses every day_
+
+- Weak and Easily Brute-Forced Passwords / SSH Login
+  - **Patch**: **`Implement SSH Private/Public Keys`** - to login via SSH and disable passwords.
+  - **Why It Works**: Each key is a large number with different mathematical properties. The Private Key is stored on the computer you login from, while the public key is stored on the .ssh/authorized_keys file on each computer you want to login to.
+  - **Patch**:  **`Enable Two-Factor Authentication`**:
+  - **Why It Works**: Your SSH servers should be secured with Two-Factor Authentication configured on it. It is one of the main protections you can add to your SSH servers to protect them from unauthorized access since each user login must tie back to a configured 2FA user. Even if a hacker manages to get a hold of your password or breaks into your SSH server, they will still get blocked by the 2FA. Follow this link to learn more about securing SSH with two factor authentication using Google Authenticator.
+  [10-steps-to-secure-open-ssh](https://blog.devolutions.net/2017/04/10-steps-to-secure-open-ssh/)
+
+
+- Python Privilege Escalation
+  - **Patch**: Remove sudo access for python for the user.
+  - **Why It Works**: Why It Works: If this access is taken away, this method of privilege escalation is no longer an issue.
+ [exploiting-sudo-rights](https://www.hackingarticles.in/linux-privilege-escalation-using-exploiting-sudo-rights/)
+
+- wp_config.php file
+  - **Patch**: Protection through .htaccess file
+  >  Secure wp_config.php file
+     <files wp-config.php>
+     order allow, deny
+     deny from all
+
+  - **Patch**: Moving wp-config.php
+  - **Patch**: Modify wp-config.php File
+  - **Patch**: Setting up the correct file permissions for wp-config.php
+  - **Why It Works**: Removal of public access to WordPress login helps reduce the attack surface
+  [secure-wp-config-file](https://www.getastra.com/blog/911/secure-wp-config-file/)
+  
