@@ -37,7 +37,7 @@ The following machines were identified on the network:
   - **IP Address**: 192.168.1.1
 
 - network Diagram
-<img src="https://github.com/mhighbe-20/Cybersecurity_Final_Project/blob/main/Images/Final%20RedvsBlue.drawio.png?raw=true" style="height: 400px; width:600px;"/>
+<img src="https://github.com/mhighbe-20/Cybersecurity_Final_Project/blob/main/Images/Final%20RedvsBlue%20(1).drawio.png?raw=true" style="height: 400px; width:600px;"/>
 
 ### Description of Targets
 Out of the vulnerable VMs on the network, Target 1 was the focus of the attack.
