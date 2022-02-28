@@ -45,6 +45,7 @@ Out of the vulnerable VMs on the network, Target 1 was the focus of the attack.
 The target of this attack was: `Target 1` (192.168.1.110).
 
 Target 1 is an Apache web server and has SSH enabled, so ports 80 and 22 are possible ports of entry for attackers. As such, the following alerts have been implemented:
+nmap -sV -sC -O 192.168.1.110
 
 <img src="https://github.com/mhighbe-20/Cybersecurity_Final_Project/blob/main/Images/RedTeam/Target-1_nmap.png?raw=true" style="height: 400px; width:600px;"/>
 
@@ -52,28 +53,30 @@ Target 1 is an Apache web server and has SSH enabled, so ports 80 and 22 are pos
 
 Traffic to these services should be carefully monitored. To this end, we have implemented the alerts below:
 
-#### Name of Alert 1
-**`Excessive HTTP Errors`** 
+#### Excessive HTTP Errors
 
-Alert 1 is implemented as follows:
-  - **Metric**: TODO
-  - **Threshold**: TODO
-  - **Vulnerability Mitigated**: TODO
-  - **Reliability**: TODO: Does this alert generate lots of false positives/false negatives? Rate as low, medium, or high reliability.
+**`Excessive HTTP Errors`**  is implemented as follows:
+  - **Metric**: WHEN count() GROUPED OVER top 5 'http.response.status_code' IS ABOVE 400 FOR THE LAST 5 minutes
+  - **Threshold**: IS ABOVE 400
+  - **Vulnerability Mitigated**: Enumeration/Brute Force
+  - **Reliability**: This alert is high reliability. Measuring by error codes 400 and above will filter out normal or successful responses. High events within the 5 minutes will trigger the alert.
+  IMAGE
 
-#### Name of Alert 2
-Alert 2 is implemented as follows:
-  - **Metric**: TODO
-  - **Threshold**: TODO
-  - **Vulnerability Mitigated**: TODO
-  - **Reliability**: TODO: Does this alert generate lots of false positives/false negatives? Rate as low, medium, or high reliability.
+#### HTTP Request Size Monitor
+**`HTTP Request Size Monitor`** is implemented as follows:
+  - **Metric**: WHEN sum() of http.request.bytes OVER all documents IS ABOVE 3500 FOR THE LAST 1 minute
+  - **Threshold**: IS ABOVE 3500
+  - **Vulnerability Mitigated**: Code injection in HTTP requests (XSS and CRLF) or DDOS
+  - **Reliability**: Alert could create false positives. It comes in at a medium reliability. There is a possibility for a large non malicious HTTP request or legitimate HTTP traffic.
+IMAGE
 
-#### Name of Alert 3
-Alert 3 is implemented as follows:
-  - **Metric**: TODO
-  - **Threshold**: TODO
-  - **Vulnerability Mitigated**: TODO
-  - **Reliability**: TODO: Does this alert generate lots of false positives/false negatives? Rate as low, medium, or high reliability.
+#### CPU Usage Monitor
+**`CPU Usage Monitor`** is implemented as follows:
+  - **Metric**: Open Metricbeats WHEN max() OF system.process.cpu.total.pct OVER all documents IS ABOVE 0.5 FOR THE LAST 5 minutes
+  - **Threshold**: IS ABOVE 0.5
+  - **Vulnerability Mitigated**: Malicious software, programs (malware or viruses) running taking up resources
+  - **Reliability**: The alert is highly reliable. Even if there isn’t a malicious program running this can still help determine where to improve on CPU usage.
+  IMAGE
 
 _TODO Note: Explain at least 3 alerts. Add more if time allows._
 
