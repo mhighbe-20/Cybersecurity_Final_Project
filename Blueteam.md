@@ -100,11 +100,11 @@ The logs and alerts generated during the assessment suggest that this network is
  [exploiting-sudo-rights](https://www.hackingarticles.in/linux-privilege-escalation-using-exploiting-sudo-rights/)
 
 - wp_config.php file
-  - **Patch**: Protection through .htaccess file
-  >  Secure wp_config.php file
-  >   <files wp-config.php>
-  >   order allow, deny
-  >   deny from all
+  - **Patch**: Protection through .htaccess file    
+>    Secure wp_config.php file
+>    <files wp-config.php>
+>    order allow, deny
+>  deny from all
 
   - **Patch**: Moving wp-config.php
   - **Patch**: Modify wp-config.php File
