@@ -96,7 +96,7 @@ The logs and alerts generated during the assessment suggest that this network is
 
 - Python Privilege Escalation
   - **Patch**: Remove sudo access for python for the user.
-  - **Why It Works**: Why It Works: If this access is taken away, this method of privilege escalation is no longer an issue.   
+  - **Why It Works**: If this access is taken away, this method of privilege escalation is no longer an issue.   
  [exploiting-sudo-rights](https://www.hackingarticles.in/linux-privilege-escalation-using-exploiting-sudo-rights/)
 
 - wp_config.php file
