@@ -61,6 +61,7 @@ Traffic to these services should be carefully monitored. To this end, we have im
   - **Vulnerability Mitigated**: Enumeration/Brute Force
   - **Reliability**: This alert is high reliability. Measuring by error codes 400 and above will filter out normal or successful responses. High events within the 5 minutes will trigger the alert.   
   IMAGE
+  <img src="https://github.com/mhighbe-20/Cybersecurity_Final_Project/blob/main/Images/kibana/Capture-06-Status%20Excessive%20HTTP%20Errors%20Monitor.PNG?raw=true" style="height: 400px; width:600px;"/>
 
 #### HTTP Request Size Monitor
 **`HTTP Request Size Monitor`** is implemented as follows:
@@ -69,6 +70,7 @@ Traffic to these services should be carefully monitored. To this end, we have im
   - **Vulnerability Mitigated**: Code injection in HTTP requests (XSS and CRLF) or DDOS
   - **Reliability**: Alert could create false positives. It comes in at a medium reliability. There is a possibility for a large non malicious HTTP request or legitimate HTTP traffic.   
 IMAGE
+<img src="https://github.com/mhighbe-20/Cybersecurity_Final_Project/blob/main/Images/kibana/Capture-04-Status%20HTTP%20Request%20Size%20Monitor.PNG?raw=true" style="height: 400px; width:600px;"/>
 
 #### CPU Usage Monitor
 **`CPU Usage Monitor`** is implemented as follows:
@@ -77,8 +79,7 @@ IMAGE
   - **Vulnerability Mitigated**: Malicious software, programs (malware or viruses) running taking up resources
   - **Reliability**: The alert is highly reliable. Even if there isn’t a malicious program running this can still help determine where to improve on CPU usage.   
   IMAGE
-
-_TODO Note: Explain at least 3 alerts. Add more if time allows._
+  <img src="https://github.com/mhighbe-20/Cybersecurity_Final_Project/blob/main/Images/kibana/Capture-05-Status%20CPU%20Usage%20Monitor.PNG?raw=true" style="height: 400px; width:600px;"/>
 
 ### Suggestions for Going Further (Optional)
 _TODO_:
