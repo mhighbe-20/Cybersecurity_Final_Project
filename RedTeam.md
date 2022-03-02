@@ -99,7 +99,7 @@ The Red Team was able to penetrate `Target 1` and retrieve the following confide
 
  - john wp_hashes.text
 
-<img src="https://github.com/mhighbe-20/Cybersecurity_Final_Project/blob/main/Images/RedTeam/Steven_Pink84.png?raw=true" style="height: 200px; width:400px;"/>
+<img src="https://github.com/mhighbe-20/Cybersecurity_Final_Project/blob/main/Images/RedTeam/Steven_Pink84.png?raw=true"/>
 
           - use Steven credentials to ssh to target1 and escalate privileges to find flag4.  
           - ssh steven@192.168.1.110
