@@ -95,7 +95,7 @@ The Red Team was able to penetrate `Target 1` and retrieve the following confide
             - The usernames and password hashes were copied to the kali server in a file (wp_hashes.txt), and cracked with John.    
             - select * from wp_users;  
 
-  <img src="https://github.com/mhighbe-20/Cybersecurity_Final_Project/blob/main/Images/RedTeam/mysql_hashes.png?raw=true"/>
+  <img src="https://github.com/mhighbe-20/Cybersecurity_Final_Project/blob/main/Images/RedTeam/Capture-04%20User%20table%20data.PNG?raw=true"/>
 
  - john wp_hashes.text
 
