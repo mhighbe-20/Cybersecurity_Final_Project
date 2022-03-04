@@ -6,7 +6,7 @@
 + Use Wireshark to analyze and find malicious traffic on the wire.
 - Create a team presentation with the assessment, analysis and hardening of the vulnerable system.
 
-### Read through the [RedTeam](https://github.com/mhighbe-20/Cybersecurity_Final_Project/blob/main/RedTeam.md), [BlueTeam](https://github.com/mhighbe-20/Cybersecurity_Final_Project/blob/main/Blueteam.md) files to see the work, processes, and findings that lead up to the final presentation.
+#### Read through the [RedTeam](https://github.com/mhighbe-20/Cybersecurity_Final_Project/blob/main/RedTeam.md), [BlueTeam](https://github.com/mhighbe-20/Cybersecurity_Final_Project/blob/main/Blueteam.md) files to see the work, processes, and findings that lead up to the final presentation.
 
-### View the pdf slide presentation [Final Project Red Team](https://github.com/mhighbe-20/Cybersecurity_Final_Project/blob/main/Final_Project_Red-Team.pdf).  
-_Note_ This presentation was created as a group with classmates. The underlying documentation for RedTeam and BluTeam Analysis was my own personal work. We were assigned to as a Team to bring our findings together and present together as a team on the final day of our Cybersecurity Bootcamp. - illustrating the ability to work independently as well as being a contributing Team member.  
+#### View the pdf slide presentation [Final Project Red Team](https://github.com/mhighbe-20/Cybersecurity_Final_Project/blob/main/Final_Project_Red-Team.pdf).  
+_Note_: This presentation was created as a group with classmates. The underlying documentation for RedTeam and BluTeam Analysis was my own personal work. We were assigned to as a Team to bring our findings together and present together as a team on the final day of our Cybersecurity Bootcamp. - illustrating the ability to work independently as well as being a contributing Team member.  
